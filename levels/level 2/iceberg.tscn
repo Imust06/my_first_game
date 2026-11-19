@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://levels/level 2/iceberg.gd" type="Script" id=1]
+[ext_resource path="res://asset/tilemap/kenney_platformer-art-pixel-redux/tilemap-1.png.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 3, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 4, 6.5 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 33.3125, 13.25 )
+
+[node name="iceberg" type="KinematicBody2D"]
+position = Vector2( 143, 47 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 76, 460, 6, 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 17 )
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 18 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 2, 56 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 19 )
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

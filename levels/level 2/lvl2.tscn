@@ -1,0 +1,2109 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://levels/level 1/backgr.tscn" type="PackedScene" id=1]
+[ext_resource path="res://asset/tilemap/kenney_platformer-art-pixel-redux/tilemap_packed-1.png.png" type="Texture" id=2]
+[ext_resource path="res://levels/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://asset/tilemap/kenney_platformer-art-pixel-redux/tilemap-1.png.png" type="Texture" id=4]
+[ext_resource path="res://levels/level 0/spike.gd" type="Script" id=5]
+[ext_resource path="res://levels/level 2/iceberg.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/level 1/checkpoint.gd" type="Script" id=7]
+[ext_resource path="res://asset/tilemap/kenney_platformer-art-pixel-redux/tilemap.png" type="Texture" id=8]
+[ext_resource path="res://levels/level 2/final.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 10, 3.5 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 19, 17 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 0, 0, 21, 0, 21, 21, 0, 21 )
+
+[sub_resource type="TileSet" id=26]
+0/name = "tilemap_packed-1.png.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 63, 42, 21, 21 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 25 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "tilemap_packed-1.png.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 42, 63, 21, 21 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "tilemap_packed-1.png.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 63, 63, 21, 21 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "tilemap_packed-1.png.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 21, 399, 21, 21 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "tilemap_packed-1.png.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 483, 441, 21, 21 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 32 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 33 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 8, 10.5 )
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 2, 10.5 )
+
+[node name="lvl2" type="Node2D"]
+
+[node name="backgrond" parent="." instance=ExtResource( 1 )]
+
+[node name="floor" type="Node2D" parent="."]
+
+[node name="floor2" type="Node2D" parent="floor"]
+
+[node name="spike44" type="Area2D" parent="floor/floor2"]
+position = Vector2( 977, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike44"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike44"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike45" type="Area2D" parent="floor/floor2"]
+position = Vector2( 956, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike45"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike45"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike46" type="Area2D" parent="floor/floor2"]
+position = Vector2( 935, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike46"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike46"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike47" type="Area2D" parent="floor/floor2"]
+position = Vector2( 914, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike47"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike47"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike48" type="Area2D" parent="floor/floor2"]
+position = Vector2( 893, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike48"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike48"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike49" type="Area2D" parent="floor/floor2"]
+position = Vector2( 872, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike49"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike49"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike50" type="Area2D" parent="floor/floor2"]
+position = Vector2( 851, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike50"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike50"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike51" type="Area2D" parent="floor/floor2"]
+position = Vector2( 830, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike51"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike51"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike52" type="Area2D" parent="floor/floor2"]
+position = Vector2( 809, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike52"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike52"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike53" type="Area2D" parent="floor/floor2"]
+position = Vector2( 788, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike53"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike53"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike54" type="Area2D" parent="floor/floor2"]
+position = Vector2( 767, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike54"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike54"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike55" type="Area2D" parent="floor/floor2"]
+position = Vector2( 746, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike55"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike55"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike56" type="Area2D" parent="floor/floor2"]
+position = Vector2( 725, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike56"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike56"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike57" type="Area2D" parent="floor/floor2"]
+position = Vector2( 704, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike57"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike57"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike58" type="Area2D" parent="floor/floor2"]
+position = Vector2( 683, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike58"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike58"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike59" type="Area2D" parent="floor/floor2"]
+position = Vector2( 662, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike59"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike59"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike60" type="Area2D" parent="floor/floor2"]
+position = Vector2( 641, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike60"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike60"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike61" type="Area2D" parent="floor/floor2"]
+position = Vector2( 620, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike61"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike61"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike62" type="Area2D" parent="floor/floor2"]
+position = Vector2( 599, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike62"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike62"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike63" type="Area2D" parent="floor/floor2"]
+position = Vector2( 578, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike63"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike63"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike64" type="Area2D" parent="floor/floor2"]
+position = Vector2( 557, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike64"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike64"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike65" type="Area2D" parent="floor/floor2"]
+position = Vector2( 536, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike65"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike65"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike66" type="Area2D" parent="floor/floor2"]
+position = Vector2( 515, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike66"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike66"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike67" type="Area2D" parent="floor/floor2"]
+position = Vector2( 494, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike67"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike67"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike68" type="Area2D" parent="floor/floor2"]
+position = Vector2( 473, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike68"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike68"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike69" type="Area2D" parent="floor/floor2"]
+position = Vector2( 452, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike69"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike69"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike70" type="Area2D" parent="floor/floor2"]
+position = Vector2( 431, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike70"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike70"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike71" type="Area2D" parent="floor/floor2"]
+position = Vector2( 410, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike71"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike71"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike72" type="Area2D" parent="floor/floor2"]
+position = Vector2( 389, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike72"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike72"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike73" type="Area2D" parent="floor/floor2"]
+position = Vector2( 368, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike73"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike73"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike74" type="Area2D" parent="floor/floor2"]
+position = Vector2( 347, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike74"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike74"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike75" type="Area2D" parent="floor/floor2"]
+position = Vector2( 326, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike75"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike75"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike76" type="Area2D" parent="floor/floor2"]
+position = Vector2( 305, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike76"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike76"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike77" type="Area2D" parent="floor/floor2"]
+position = Vector2( 284, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike77"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike77"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike78" type="Area2D" parent="floor/floor2"]
+position = Vector2( 263, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike78"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike78"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike79" type="Area2D" parent="floor/floor2"]
+position = Vector2( 242, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike79"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike79"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike80" type="Area2D" parent="floor/floor2"]
+position = Vector2( 221, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike80"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike80"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike81" type="Area2D" parent="floor/floor2"]
+position = Vector2( 200, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike81"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike81"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike82" type="Area2D" parent="floor/floor2"]
+position = Vector2( 179, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike82"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike82"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike83" type="Area2D" parent="floor/floor2"]
+position = Vector2( 158, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike83"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike83"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike84" type="Area2D" parent="floor/floor2"]
+position = Vector2( 137, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike84"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike84"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike85" type="Area2D" parent="floor/floor2"]
+position = Vector2( 116, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike85"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike85"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike86" type="Area2D" parent="floor/floor2"]
+position = Vector2( 95, 437 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor2/spike86"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor2/spike86"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="floor" type="Node2D" parent="floor"]
+
+[node name="spike" type="Area2D" parent="floor/floor"]
+position = Vector2( 52, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike2" type="Area2D" parent="floor/floor"]
+position = Vector2( 73, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike2"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike2"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike3" type="Area2D" parent="floor/floor"]
+position = Vector2( 94, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike3"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike3"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike4" type="Area2D" parent="floor/floor"]
+position = Vector2( 115, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike4"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike4"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike5" type="Area2D" parent="floor/floor"]
+position = Vector2( 136, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike5"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike5"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike6" type="Area2D" parent="floor/floor"]
+position = Vector2( 157, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike6"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike6"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike7" type="Area2D" parent="floor/floor"]
+position = Vector2( 178, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike7"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike7"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike8" type="Area2D" parent="floor/floor"]
+position = Vector2( 199, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike8"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike8"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike9" type="Area2D" parent="floor/floor"]
+position = Vector2( 220, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike9"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike9"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike10" type="Area2D" parent="floor/floor"]
+position = Vector2( 241, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike10"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike10"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike11" type="Area2D" parent="floor/floor"]
+position = Vector2( 262, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike11"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike11"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike12" type="Area2D" parent="floor/floor"]
+position = Vector2( 283, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike12"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike12"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike13" type="Area2D" parent="floor/floor"]
+position = Vector2( 304, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike13"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike13"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike14" type="Area2D" parent="floor/floor"]
+position = Vector2( 325, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike14"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike14"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike15" type="Area2D" parent="floor/floor"]
+position = Vector2( 346, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike15"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike15"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike16" type="Area2D" parent="floor/floor"]
+position = Vector2( 367, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike16"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike16"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike17" type="Area2D" parent="floor/floor"]
+position = Vector2( 388, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike17"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike17"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike18" type="Area2D" parent="floor/floor"]
+position = Vector2( 409, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike18"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike18"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike19" type="Area2D" parent="floor/floor"]
+position = Vector2( 430, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike19"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike19"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike20" type="Area2D" parent="floor/floor"]
+position = Vector2( 451, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike20"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike20"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike21" type="Area2D" parent="floor/floor"]
+position = Vector2( 472, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike21"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike21"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike22" type="Area2D" parent="floor/floor"]
+position = Vector2( 493, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike22"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike22"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike27" type="Area2D" parent="floor/floor"]
+position = Vector2( 514, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike27"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike27"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike28" type="Area2D" parent="floor/floor"]
+position = Vector2( 534, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike28"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike28"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike29" type="Area2D" parent="floor/floor"]
+position = Vector2( 555, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike29"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike29"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike30" type="Area2D" parent="floor/floor"]
+position = Vector2( 576, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike30"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike30"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike31" type="Area2D" parent="floor/floor"]
+position = Vector2( 597, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike31"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike31"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike32" type="Area2D" parent="floor/floor"]
+position = Vector2( 618, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike32"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike32"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike33" type="Area2D" parent="floor/floor"]
+position = Vector2( 639, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike33"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike33"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike34" type="Area2D" parent="floor/floor"]
+position = Vector2( 660, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike34"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike34"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike35" type="Area2D" parent="floor/floor"]
+position = Vector2( 681, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike35"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike35"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike36" type="Area2D" parent="floor/floor"]
+position = Vector2( 702, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike36"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike36"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike37" type="Area2D" parent="floor/floor"]
+position = Vector2( 723, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike37"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike37"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike38" type="Area2D" parent="floor/floor"]
+position = Vector2( 744, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike38"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike38"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike39" type="Area2D" parent="floor/floor"]
+position = Vector2( 765, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike39"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike39"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike40" type="Area2D" parent="floor/floor"]
+position = Vector2( 786, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike40"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike40"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike41" type="Area2D" parent="floor/floor"]
+position = Vector2( 806, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike41"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike41"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike42" type="Area2D" parent="floor/floor"]
+position = Vector2( 827, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike42"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike42"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike43" type="Area2D" parent="floor/floor"]
+position = Vector2( 848, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike43"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike43"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike44" type="Area2D" parent="floor/floor"]
+position = Vector2( 869, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike44"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike44"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike45" type="Area2D" parent="floor/floor"]
+position = Vector2( 890, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike45"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike45"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike46" type="Area2D" parent="floor/floor"]
+position = Vector2( 911, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike46"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike46"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike47" type="Area2D" parent="floor/floor"]
+position = Vector2( 932, 206 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor/spike47"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor/spike47"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="floor3" type="Node2D" parent="floor"]
+
+[node name="spike87" type="Area2D" parent="floor/floor3"]
+position = Vector2( 52, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike87"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike87"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike88" type="Area2D" parent="floor/floor3"]
+position = Vector2( 73, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike88"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike88"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike89" type="Area2D" parent="floor/floor3"]
+position = Vector2( 94, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike89"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike89"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike90" type="Area2D" parent="floor/floor3"]
+position = Vector2( 115, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike90"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike90"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike91" type="Area2D" parent="floor/floor3"]
+position = Vector2( 136, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike91"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike91"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike92" type="Area2D" parent="floor/floor3"]
+position = Vector2( 157, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike92"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike92"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike93" type="Area2D" parent="floor/floor3"]
+position = Vector2( 178, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike93"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike93"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike94" type="Area2D" parent="floor/floor3"]
+position = Vector2( 199, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike94"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike94"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike95" type="Area2D" parent="floor/floor3"]
+position = Vector2( 220, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike95"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike95"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike96" type="Area2D" parent="floor/floor3"]
+position = Vector2( 241, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike96"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike96"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike97" type="Area2D" parent="floor/floor3"]
+position = Vector2( 262, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike97"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike97"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike98" type="Area2D" parent="floor/floor3"]
+position = Vector2( 283, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike98"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike98"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike99" type="Area2D" parent="floor/floor3"]
+position = Vector2( 304, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike99"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike99"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike100" type="Area2D" parent="floor/floor3"]
+position = Vector2( 325, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike100"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike100"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike101" type="Area2D" parent="floor/floor3"]
+position = Vector2( 346, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike101"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike101"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike102" type="Area2D" parent="floor/floor3"]
+position = Vector2( 367, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike102"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike102"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike103" type="Area2D" parent="floor/floor3"]
+position = Vector2( 388, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike103"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike103"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike104" type="Area2D" parent="floor/floor3"]
+position = Vector2( 409, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike104"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike104"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike105" type="Area2D" parent="floor/floor3"]
+position = Vector2( 430, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike105"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike105"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike106" type="Area2D" parent="floor/floor3"]
+position = Vector2( 451, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike106"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike106"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike107" type="Area2D" parent="floor/floor3"]
+position = Vector2( 472, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike107"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike107"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike108" type="Area2D" parent="floor/floor3"]
+position = Vector2( 493, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike108"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike108"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike109" type="Area2D" parent="floor/floor3"]
+position = Vector2( 514, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike109"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike109"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike110" type="Area2D" parent="floor/floor3"]
+position = Vector2( 535, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike110"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike110"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike111" type="Area2D" parent="floor/floor3"]
+position = Vector2( 556, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike111"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike111"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike112" type="Area2D" parent="floor/floor3"]
+position = Vector2( 577, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike112"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike112"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike113" type="Area2D" parent="floor/floor3"]
+position = Vector2( 598, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike113"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike113"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike114" type="Area2D" parent="floor/floor3"]
+position = Vector2( 619, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike114"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike114"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike115" type="Area2D" parent="floor/floor3"]
+position = Vector2( 640, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike115"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike115"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike116" type="Area2D" parent="floor/floor3"]
+position = Vector2( 661, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike116"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike116"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike117" type="Area2D" parent="floor/floor3"]
+position = Vector2( 682, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike117"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike117"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike118" type="Area2D" parent="floor/floor3"]
+position = Vector2( 703, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike118"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike118"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike119" type="Area2D" parent="floor/floor3"]
+position = Vector2( 724, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike119"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike119"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike120" type="Area2D" parent="floor/floor3"]
+position = Vector2( 745, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike120"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike120"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike121" type="Area2D" parent="floor/floor3"]
+position = Vector2( 766, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike121"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike121"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike122" type="Area2D" parent="floor/floor3"]
+position = Vector2( 787, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike122"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike122"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike123" type="Area2D" parent="floor/floor3"]
+position = Vector2( 808, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike123"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike123"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike124" type="Area2D" parent="floor/floor3"]
+position = Vector2( 829, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike124"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike124"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike125" type="Area2D" parent="floor/floor3"]
+position = Vector2( 850, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike125"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike125"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike126" type="Area2D" parent="floor/floor3"]
+position = Vector2( 871, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike126"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike126"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike127" type="Area2D" parent="floor/floor3"]
+position = Vector2( 892, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike127"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike127"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike128" type="Area2D" parent="floor/floor3"]
+position = Vector2( 913, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike128"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike128"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike129" type="Area2D" parent="floor/floor3"]
+position = Vector2( 934, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike129"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike129"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike130" type="Area2D" parent="floor/floor3"]
+position = Vector2( 955, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike130"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike130"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="spike131" type="Area2D" parent="floor/floor3"]
+position = Vector2( 976, 668 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="floor/floor3/spike131"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 230, 58, 21, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/floor3/spike131"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+
+[node name="icebergs" type="Node2D" parent="."]
+
+[node name="floor1" type="Node2D" parent="icebergs"]
+
+[node name="iceberg" parent="icebergs/floor1" instance=ExtResource( 6 )]
+position = Vector2( 145, 47 )
+
+[node name="iceberg2" parent="icebergs/floor1" instance=ExtResource( 6 )]
+position = Vector2( 273, 47 )
+
+[node name="iceberg3" parent="icebergs/floor1" instance=ExtResource( 6 )]
+position = Vector2( 399, 47 )
+
+[node name="iceberg4" parent="icebergs/floor1" instance=ExtResource( 6 )]
+position = Vector2( 609, 47 )
+
+[node name="iceberg5" parent="icebergs/floor1" instance=ExtResource( 6 )]
+position = Vector2( 738, 47 )
+
+[node name="iceberg6" parent="icebergs/floor1" instance=ExtResource( 6 )]
+position = Vector2( 860, 47 )
+
+[node name="floor3" type="Node2D" parent="icebergs"]
+
+[node name="iceberg" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 138, 509 )
+
+[node name="iceberg2" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 220, 509 )
+
+[node name="iceberg3" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 301, 509 )
+
+[node name="iceberg4" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 386, 509 )
+
+[node name="iceberg5" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 470, 509 )
+
+[node name="iceberg6" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 554, 509 )
+
+[node name="iceberg7" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 638, 509 )
+
+[node name="iceberg8" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 724, 509 )
+
+[node name="iceberg9" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 806, 509 )
+
+[node name="iceberg10" parent="icebergs/floor3" instance=ExtResource( 6 )]
+position = Vector2( 889, 509 )
+
+[node name="check" type="Node2D" parent="."]
+
+[node name="checkpoint" type="Area2D" parent="check"]
+position = Vector2( 972, 346 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="check/checkpoint"]
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 444, 140, 18, 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="check/checkpoint"]
+position = Vector2( -5, -7 )
+shape = SubResource( 28 )
+
+[node name="checkpoint2" type="Area2D" parent="check"]
+position = Vector2( 66, 576 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="check/checkpoint2"]
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 444, 140, 18, 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="check/checkpoint2"]
+position = Vector2( -5, -7 )
+shape = SubResource( 28 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 26 )
+cell_size = Vector2( 21, 21 )
+format = 1
+tile_data = PoolIntArray( 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 1, 0, 31, 1, 0, 32, 1, 0, 33, 1, 0, 34, 1, 0, 35, 1, 0, 36, 1, 0, 37, 1, 0, 38, 1, 0, 39, 1, 0, 40, 1, 0, 41, 1, 0, 42, 1, 0, 43, 1, 0, 44, 1, 0, 45, 1, 0, 46, 1, 0, 47, 1, 0, 48, 1, 0, 49, 1, 0, 50, 1, 0, 51, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1, 0, 65552, 1, 0, 65553, 1, 0, 65554, 1, 0, 65555, 1, 0, 65556, 1, 0, 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 1, 0, 65566, 1, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 65571, 1, 0, 65572, 1, 0, 65573, 1, 0, 65574, 1, 0, 65575, 1, 0, 65576, 1, 0, 65577, 1, 0, 65578, 1, 0, 65579, 1, 0, 65580, 1, 0, 65581, 1, 0, 65582, 1, 0, 65583, 1, 0, 65584, 1, 0, 65585, 1, 0, 65586, 1, 0, 65587, 1, 0, 196604, 1, 0, 196605, 1, 0, 196606, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, 131084, 3, 0, 131085, 3, 0, 131086, 3, 0, 131087, 3, 0, 131088, 3, 0, 131089, 3, 0, 131090, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 3, 0, 131094, 3, 0, 131095, 3, 0, 131096, 3, 0, 131097, 3, 0, 131098, 3, 0, 131099, 3, 0, 131100, 3, 0, 131101, 3, 0, 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 131107, 3, 0, 131108, 3, 0, 131109, 3, 0, 131110, 3, 0, 131111, 3, 0, 131112, 3, 0, 131113, 3, 0, 131114, 3, 0, 131115, 3, 0, 131116, 3, 0, 131117, 3, 0, 131118, 3, 0, 131119, 1, 0, 131120, 1, 0, 131121, 1, 0, 131122, 1, 0, 131123, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196655, 1, 0, 196656, 1, 0, 196657, 1, 0, 196658, 1, 0, 196659, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262191, 1, 0, 262192, 1, 0, 262193, 1, 0, 262194, 1, 0, 262195, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327727, 1, 0, 327728, 1, 0, 327729, 1, 0, 327730, 1, 0, 327731, 1, 0, 458748, 1, 0, 458749, 1, 0, 458750, 1, 0, 458751, 1, 0, 393216, 1, 0, 393217, 1, 0, 393218, 0, 0, 393219, 0, 0, 393220, 2, 0, 393225, 536870914, 0, 393226, 2, 0, 393231, 536870914, 0, 393232, 2, 0, 393237, 536870914, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393242, 2, 0, 393247, 536870914, 0, 393248, 2, 0, 393253, 536870914, 0, 393254, 2, 0, 393259, 536870914, 0, 393260, 2, 0, 393263, 1, 0, 393264, 1, 0, 393265, 1, 0, 393266, 1, 0, 393267, 1, 0, 524284, 1, 0, 524285, 1, 0, 524286, 1, 0, 524287, 1, 0, 458752, 1, 0, 458753, 1, 0, 458799, 1, 0, 458800, 1, 0, 458801, 1, 0, 458802, 1, 0, 458803, 1, 0, 589820, 1, 0, 589821, 1, 0, 589822, 1, 0, 589823, 1, 0, 524288, 1, 0, 524289, 1, 0, 524335, 1, 0, 524336, 1, 0, 524337, 1, 0, 524338, 1, 0, 524339, 1, 0, 655356, 1, 0, 655357, 1, 0, 655358, 1, 0, 655359, 1, 0, 589824, 1, 0, 589825, 1, 0, 589871, 1, 0, 589872, 1, 0, 589873, 1, 0, 589874, 1, 0, 589875, 1, 0, 720892, 1, 0, 720893, 1, 0, 720894, 1, 0, 720895, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 655380, 0, 0, 655381, 0, 0, 655382, 0, 0, 655383, 0, 0, 655384, 0, 0, 655385, 0, 0, 655386, 0, 0, 655387, 0, 0, 655388, 0, 0, 655389, 0, 0, 655390, 0, 0, 655391, 0, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655395, 0, 0, 655396, 0, 0, 655397, 0, 0, 655398, 0, 0, 655399, 0, 0, 655400, 0, 0, 655401, 0, 0, 655402, 0, 0, 655403, 0, 0, 655404, 0, 0, 655407, 1, 0, 655408, 1, 0, 655409, 1, 0, 655410, 1, 0, 655411, 1, 0, 786428, 1, 0, 786429, 1, 0, 786430, 1, 0, 786431, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 720926, 1, 0, 720927, 1, 0, 720928, 1, 0, 720929, 1, 0, 720930, 1, 0, 720931, 1, 0, 720932, 1, 0, 720933, 1, 0, 720934, 1, 0, 720935, 1, 0, 720936, 1, 0, 720937, 1, 0, 720938, 1, 0, 720939, 1, 0, 720940, 1, 0, 720943, 1, 0, 720944, 1, 0, 720945, 1, 0, 720946, 1, 0, 720947, 1, 0, 851964, 1, 0, 851965, 1, 0, 851966, 1, 0, 851967, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 1, 0, 786465, 1, 0, 786466, 1, 0, 786467, 1, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 1, 0, 786479, 1, 0, 786480, 1, 0, 786481, 1, 0, 786482, 1, 0, 786483, 1, 0, 917500, 1, 0, 917501, 1, 0, 917502, 1, 0, 917503, 1, 0, 851968, 1, 0, 851969, 1, 0, 851970, 3, 0, 851971, 3, 0, 851972, 3, 0, 851973, 3, 0, 851974, 3, 0, 851975, 3, 0, 851976, 3, 0, 851977, 3, 0, 851978, 3, 0, 851979, 3, 0, 851980, 3, 0, 851981, 3, 0, 851982, 3, 0, 851983, 3, 0, 851984, 3, 0, 851985, 3, 0, 851986, 3, 0, 851987, 3, 0, 851988, 3, 0, 851989, 3, 0, 851990, 3, 0, 851991, 3, 0, 851992, 3, 0, 851993, 3, 0, 851994, 3, 0, 851995, 3, 0, 851996, 3, 0, 851997, 3, 0, 851998, 3, 0, 851999, 3, 0, 852000, 3, 0, 852001, 3, 0, 852002, 3, 0, 852003, 3, 0, 852004, 3, 0, 852005, 3, 0, 852006, 3, 0, 852007, 3, 0, 852008, 3, 0, 852009, 3, 0, 852010, 3, 0, 852011, 3, 0, 852012, 3, 0, 852015, 1, 0, 852016, 1, 0, 852017, 1, 0, 852018, 1, 0, 852019, 1, 0, 983036, 1, 0, 983037, 1, 0, 983038, 1, 0, 983039, 1, 0, 917504, 1, 0, 917505, 1, 0, 917551, 1, 0, 917552, 1, 0, 917553, 1, 0, 917554, 1, 0, 917555, 1, 0, 1048572, 1, 0, 1048573, 1, 0, 1048574, 1, 0, 1048575, 1, 0, 983040, 1, 0, 983041, 1, 0, 983087, 1, 0, 983088, 1, 0, 983089, 1, 0, 983090, 1, 0, 983091, 1, 0, 1114108, 1, 0, 1114109, 1, 0, 1114110, 1, 0, 1114111, 1, 0, 1048576, 1, 0, 1048577, 1, 0, 1048623, 1, 0, 1048624, 1, 0, 1048625, 1, 0, 1048626, 1, 0, 1048627, 1, 0, 1179644, 1, 0, 1179645, 1, 0, 1179646, 1, 0, 1179647, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114156, 536870914, 0, 1114157, 536870912, 0, 1114158, 536870912, 0, 1114159, 1, 0, 1114160, 1, 0, 1114161, 1, 0, 1114162, 1, 0, 1114163, 1, 0, 1245180, 1, 0, 1245181, 1, 0, 1245182, 1, 0, 1245183, 1, 0, 1179648, 1, 0, 1179649, 1, 0, 1179695, 1, 0, 1179696, 1, 0, 1179697, 1, 0, 1179698, 1, 0, 1179699, 1, 0, 1310716, 1, 0, 1310717, 1, 0, 1310718, 1, 0, 1310719, 1, 0, 1245184, 1, 0, 1245185, 1, 0, 1245231, 1, 0, 1245232, 1, 0, 1245233, 1, 0, 1245234, 1, 0, 1245235, 1, 0, 1376252, 1, 0, 1376253, 1, 0, 1376254, 1, 0, 1376255, 1, 0, 1310720, 1, 0, 1310721, 1, 0, 1310767, 1, 0, 1310768, 1, 0, 1310769, 1, 0, 1310770, 1, 0, 1310771, 1, 0, 1441788, 1, 0, 1441789, 1, 0, 1441790, 1, 0, 1441791, 1, 0, 1376256, 1, 0, 1376257, 1, 0, 1376260, 0, 0, 1376261, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1376264, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1376277, 0, 0, 1376278, 0, 0, 1376279, 0, 0, 1376280, 0, 0, 1376281, 0, 0, 1376282, 0, 0, 1376283, 0, 0, 1376284, 0, 0, 1376285, 0, 0, 1376286, 0, 0, 1376287, 0, 0, 1376288, 0, 0, 1376289, 0, 0, 1376290, 0, 0, 1376291, 0, 0, 1376292, 0, 0, 1376293, 0, 0, 1376294, 0, 0, 1376295, 0, 0, 1376296, 0, 0, 1376297, 0, 0, 1376298, 0, 0, 1376299, 0, 0, 1376300, 0, 0, 1376301, 0, 0, 1376302, 0, 0, 1376303, 1, 0, 1376304, 1, 0, 1376305, 1, 0, 1376306, 1, 0, 1376307, 1, 0, 1507324, 1, 0, 1507325, 1, 0, 1507326, 1, 0, 1507327, 1, 0, 1441792, 1, 0, 1441793, 1, 0, 1441796, 1, 0, 1441797, 1, 0, 1441798, 1, 0, 1441799, 1, 0, 1441800, 1, 0, 1441801, 1, 0, 1441802, 1, 0, 1441803, 1, 0, 1441804, 1, 0, 1441805, 1, 0, 1441806, 1, 0, 1441807, 1, 0, 1441808, 1, 0, 1441809, 1, 0, 1441810, 1, 0, 1441811, 1, 0, 1441812, 1, 0, 1441813, 1, 0, 1441814, 1, 0, 1441815, 1, 0, 1441816, 1, 0, 1441817, 1, 0, 1441818, 1, 0, 1441819, 1, 0, 1441820, 1, 0, 1441821, 1, 0, 1441822, 1, 0, 1441823, 1, 0, 1441824, 1, 0, 1441825, 1, 0, 1441826, 1, 0, 1441827, 1, 0, 1441828, 1, 0, 1441829, 1, 0, 1441830, 1, 0, 1441831, 1, 0, 1441832, 1, 0, 1441833, 1, 0, 1441834, 1, 0, 1441835, 1, 0, 1441836, 1, 0, 1441837, 1, 0, 1441838, 1, 0, 1441839, 1, 0, 1441840, 1, 0, 1441841, 1, 0, 1441842, 1, 0, 1441843, 1, 0, 1572860, 1, 0, 1572861, 1, 0, 1572862, 1, 0, 1572863, 1, 0, 1507328, 1, 0, 1507329, 1, 0, 1507332, 1, 0, 1507333, 1, 0, 1507334, 1, 0, 1507335, 1, 0, 1507336, 1, 0, 1507337, 1, 0, 1507338, 1, 0, 1507339, 1, 0, 1507340, 1, 0, 1507341, 1, 0, 1507342, 1, 0, 1507343, 1, 0, 1507344, 1, 0, 1507345, 1, 0, 1507346, 1, 0, 1507347, 1, 0, 1507348, 1, 0, 1507349, 1, 0, 1507350, 1, 0, 1507351, 1, 0, 1507352, 1, 0, 1507353, 1, 0, 1507354, 1, 0, 1507355, 1, 0, 1507356, 1, 0, 1507357, 1, 0, 1507358, 1, 0, 1507359, 1, 0, 1507360, 1, 0, 1507361, 1, 0, 1507362, 1, 0, 1507363, 1, 0, 1507364, 1, 0, 1507365, 1, 0, 1507366, 1, 0, 1507367, 1, 0, 1507368, 1, 0, 1507369, 1, 0, 1507370, 1, 0, 1507371, 1, 0, 1507372, 1, 0, 1507373, 1, 0, 1507374, 1, 0, 1507375, 1, 0, 1507376, 1, 0, 1507377, 1, 0, 1507378, 1, 0, 1507379, 1, 0, 1638396, 1, 0, 1638397, 1, 0, 1638398, 1, 0, 1638399, 1, 0, 1572864, 1, 0, 1572865, 1, 0, 1572868, 3, 0, 1572869, 3, 0, 1572870, 3, 0, 1572871, 3, 0, 1572872, 3, 0, 1572873, 3, 0, 1572874, 3, 0, 1572875, 3, 0, 1572876, 3, 0, 1572877, 3, 0, 1572878, 3, 0, 1572879, 3, 0, 1572880, 3, 0, 1572881, 3, 0, 1572882, 3, 0, 1572883, 3, 0, 1572884, 3, 0, 1572885, 3, 0, 1572886, 3, 0, 1572887, 3, 0, 1572888, 3, 0, 1572889, 3, 0, 1572890, 3, 0, 1572891, 3, 0, 1572892, 3, 0, 1572893, 3, 0, 1572894, 3, 0, 1572895, 3, 0, 1572896, 3, 0, 1572897, 3, 0, 1572898, 3, 0, 1572899, 3, 0, 1572900, 3, 0, 1572901, 3, 0, 1572902, 3, 0, 1572903, 3, 0, 1572904, 3, 0, 1572905, 3, 0, 1572906, 3, 0, 1572907, 3, 0, 1572908, 3, 0, 1572909, 3, 0, 1572910, 3, 0, 1572911, 1, 0, 1572912, 1, 0, 1572913, 1, 0, 1572914, 1, 0, 1572915, 1, 0, 1703932, 1, 0, 1703933, 1, 0, 1703934, 1, 0, 1703935, 1, 0, 1638400, 1, 0, 1638401, 1, 0, 1638447, 1, 0, 1638448, 1, 0, 1638449, 1, 0, 1638450, 1, 0, 1638451, 1, 0, 1769468, 1, 0, 1769469, 1, 0, 1769470, 1, 0, 1769471, 1, 0, 1703936, 1, 0, 1703937, 1, 0, 1703983, 1, 0, 1703984, 1, 0, 1703985, 1, 0, 1703986, 1, 0, 1703987, 1, 0, 1835004, 1, 0, 1835005, 1, 0, 1835006, 1, 0, 1835007, 1, 0, 1769472, 1, 0, 1769473, 1, 0, 1769520, 1, 0, 1769521, 1, 0, 1769522, 1, 0, 1769523, 1, 0, 1900540, 1, 0, 1900541, 1, 0, 1900542, 1, 0, 1900543, 1, 0, 1835008, 1, 0, 1835009, 1, 0, 1835010, 0, 0, 1835011, 0, 0, 1835012, 2, 0, 1835052, 536870914, 0, 1835053, 536870912, 0, 1835054, 536870912, 0, 1835055, 1, 0, 1835056, 1, 0, 1835057, 1, 0, 1835058, 1, 0, 1835059, 1, 0, 1966076, 1, 0, 1966077, 1, 0, 1966078, 1, 0, 1966079, 1, 0, 1900544, 1, 0, 1900545, 1, 0, 1900591, 1, 0, 1900592, 1, 0, 1900593, 1, 0, 1900594, 1, 0, 1900595, 1, 0, 2031612, 1, 0, 2031613, 1, 0, 2031614, 1, 0, 2031615, 1, 0, 1966080, 1, 0, 1966081, 1, 0, 1966127, 1, 0, 1966128, 1, 0, 1966129, 1, 0, 1966130, 1, 0, 1966131, 1, 0, 2097148, 1, 0, 2097149, 1, 0, 2097150, 1, 0, 2097151, 1, 0, 2031616, 1, 0, 2031617, 1, 0, 2031663, 1, 0, 2031664, 1, 0, 2031665, 1, 0, 2031666, 1, 0, 2031667, 1, 0, 2162684, 1, 0, 2162685, 1, 0, 2162686, 1, 0, 2162687, 1, 0, 2097152, 1, 0, 2097153, 1, 0, 2097154, 1, 0, 2097155, 1, 0, 2097156, 1, 0, 2097157, 1, 0, 2097158, 1, 0, 2097159, 1, 0, 2097160, 1, 0, 2097161, 1, 0, 2097162, 1, 0, 2097163, 1, 0, 2097164, 1, 0, 2097165, 1, 0, 2097166, 1, 0, 2097167, 1, 0, 2097168, 1, 0, 2097169, 1, 0, 2097170, 1, 0, 2097171, 1, 0, 2097172, 1, 0, 2097173, 1, 0, 2097174, 1, 0, 2097175, 1, 0, 2097176, 1, 0, 2097177, 1, 0, 2097178, 1, 0, 2097179, 1, 0, 2097180, 1, 0, 2097181, 1, 0, 2097182, 1, 0, 2097183, 1, 0, 2097184, 1, 0, 2097185, 1, 0, 2097186, 1, 0, 2097187, 1, 0, 2097188, 1, 0, 2097189, 1, 0, 2097190, 1, 0, 2097191, 1, 0, 2097192, 1, 0, 2097193, 1, 0, 2097194, 1, 0, 2097195, 1, 0, 2097196, 1, 0, 2097197, 1, 0, 2097198, 1, 0, 2097199, 1, 0, 2097200, 1, 0, 2097201, 1, 0, 2097202, 1, 0, 2097203, 1, 0, 2228220, 1, 0, 2228221, 1, 0, 2228222, 1, 0, 2228223, 1, 0, 2162688, 1, 0, 2162689, 1, 0, 2162690, 1, 0, 2162691, 1, 0, 2162692, 1, 0, 2162693, 1, 0, 2162694, 1, 0, 2162695, 1, 0, 2162696, 1, 0, 2162697, 1, 0, 2162698, 1, 0, 2162699, 1, 0, 2162700, 1, 0, 2162701, 1, 0, 2162702, 1, 0, 2162703, 1, 0, 2162704, 1, 0, 2162705, 1, 0, 2162706, 1, 0, 2162707, 1, 0, 2162708, 1, 0, 2162709, 1, 0, 2162710, 1, 0, 2162711, 1, 0, 2162712, 1, 0, 2162713, 1, 0, 2162714, 1, 0, 2162715, 1, 0, 2162716, 1, 0, 2162717, 1, 0, 2162718, 1, 0, 2162719, 1, 0, 2162720, 1, 0, 2162721, 1, 0, 2162722, 1, 0, 2162723, 1, 0, 2162724, 1, 0, 2162725, 1, 0, 2162726, 1, 0, 2162727, 1, 0, 2162728, 1, 0, 2162729, 1, 0, 2162730, 1, 0, 2162731, 1, 0, 2162732, 1, 0, 2162733, 1, 0, 2162734, 1, 0, 2162735, 1, 0, 2162736, 1, 0, 2162737, 1, 0, 2162738, 1, 0, 2162739, 1, 0, 2293756, 1, 0, 2293757, 1, 0, 2293758, 1, 0, 2293759, 1, 0, 2228224, 1, 0, 2228225, 1, 0, 2228226, 1, 0, 2228227, 1, 0, 2228228, 1, 0, 2228229, 1, 0, 2228230, 1, 0, 2228231, 1, 0, 2228232, 1, 0, 2228233, 1, 0, 2228234, 1, 0, 2228235, 1, 0, 2228236, 1, 0, 2228237, 1, 0, 2228238, 1, 0, 2228239, 1, 0, 2228240, 1, 0, 2228241, 1, 0, 2228242, 1, 0, 2228243, 1, 0, 2228244, 1, 0, 2228245, 1, 0, 2228246, 1, 0, 2228247, 1, 0, 2228248, 1, 0, 2228249, 1, 0, 2228250, 1, 0, 2228251, 1, 0, 2228252, 1, 0, 2228253, 1, 0, 2228254, 1, 0, 2228255, 1, 0, 2228256, 1, 0, 2228257, 1, 0, 2228258, 1, 0, 2228259, 1, 0, 2228260, 1, 0, 2228261, 1, 0, 2228262, 1, 0, 2228263, 1, 0, 2228264, 1, 0, 2228265, 1, 0, 2228266, 1, 0, 2228267, 1, 0, 2228268, 1, 0, 2228269, 1, 0, 2228270, 1, 0, 2228271, 1, 0, 2228272, 1, 0, 2228273, 1, 0, 2228274, 1, 0, 2228275, 1, 0, 2359292, 1, 0, 2359293, 1, 0, 2359294, 1, 0, 2359295, 1, 0, 2293760, 1, 0, 2293761, 1, 0, 2293762, 1, 0, 2293763, 1, 0, 2293764, 1, 0, 2293765, 1, 0, 2293766, 1, 0, 2293767, 1, 0, 2293768, 1, 0, 2293769, 1, 0, 2293770, 1, 0, 2293771, 1, 0, 2293772, 1, 0, 2293773, 1, 0, 2293774, 1, 0, 2293775, 1, 0, 2293776, 1, 0, 2293777, 1, 0, 2293778, 1, 0, 2293779, 1, 0, 2293780, 1, 0, 2293781, 1, 0, 2293782, 1, 0, 2293783, 1, 0, 2293784, 1, 0, 2293785, 1, 0, 2293786, 1, 0, 2293787, 1, 0, 2293788, 1, 0, 2293789, 1, 0, 2293790, 1, 0, 2293791, 1, 0, 2293792, 1, 0, 2293793, 1, 0, 2293794, 1, 0, 2293795, 1, 0, 2293796, 1, 0, 2293797, 1, 0, 2293798, 1, 0, 2293799, 1, 0, 2293800, 1, 0, 2293801, 1, 0, 2293802, 1, 0, 2293803, 1, 0, 2293804, 1, 0, 2293805, 1, 0, 2293806, 1, 0, 2293807, 1, 0, 2293808, 1, 0, 2293809, 1, 0, 2293810, 1, 0, 2293811, 1, 0 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 50, 115 )
+
+[node name="cutsceen" type="Node2D" parent="."]
+position = Vector2( 997, 579 )
+
+[node name="final" type="StaticBody2D" parent="cutsceen"]
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="cutsceen/final"]
+position = Vector2( 0.500033, -1.5 )
+scale = Vector2( 1.5, 1.75 )
+texture = ExtResource( 4 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 75, 78, 14, 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cutsceen/final"]
+position = Vector2( 2, -1.5 )
+shape = SubResource( 30 )
+
+[node name="Area2D" type="Area2D" parent="cutsceen/final"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cutsceen/final/Area2D"]
+position = Vector2( -8, -1.5 )
+shape = SubResource( 31 )
+
+[connection signal="body_entered" from="floor/floor2/spike44" to="floor/floor2/spike44" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike45" to="floor/floor2/spike45" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike46" to="floor/floor2/spike46" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike47" to="floor/floor2/spike47" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike48" to="floor/floor2/spike48" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike49" to="floor/floor2/spike49" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike50" to="floor/floor2/spike50" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike51" to="floor/floor2/spike51" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike52" to="floor/floor2/spike52" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike53" to="floor/floor2/spike53" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike54" to="floor/floor2/spike54" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike55" to="floor/floor2/spike55" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike56" to="floor/floor2/spike56" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike57" to="floor/floor2/spike57" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike58" to="floor/floor2/spike58" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike59" to="floor/floor2/spike59" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike60" to="floor/floor2/spike60" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike61" to="floor/floor2/spike61" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike62" to="floor/floor2/spike62" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike63" to="floor/floor2/spike63" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike64" to="floor/floor2/spike64" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike65" to="floor/floor2/spike65" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike66" to="floor/floor2/spike66" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike67" to="floor/floor2/spike67" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike68" to="floor/floor2/spike68" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike69" to="floor/floor2/spike69" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike70" to="floor/floor2/spike70" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike71" to="floor/floor2/spike71" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike72" to="floor/floor2/spike72" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike73" to="floor/floor2/spike73" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike74" to="floor/floor2/spike74" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike75" to="floor/floor2/spike75" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike76" to="floor/floor2/spike76" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike77" to="floor/floor2/spike77" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike78" to="floor/floor2/spike78" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike79" to="floor/floor2/spike79" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike80" to="floor/floor2/spike80" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike81" to="floor/floor2/spike81" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike82" to="floor/floor2/spike82" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike83" to="floor/floor2/spike83" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike84" to="floor/floor2/spike84" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike85" to="floor/floor2/spike85" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor2/spike86" to="floor/floor2/spike86" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike" to="floor/floor/spike" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike2" to="floor/floor/spike2" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike3" to="floor/floor/spike3" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike4" to="floor/floor/spike4" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike5" to="floor/floor/spike5" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike6" to="floor/floor/spike6" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike7" to="floor/floor/spike7" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike8" to="floor/floor/spike8" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike9" to="floor/floor/spike9" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike10" to="floor/floor/spike10" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike11" to="floor/floor/spike11" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike12" to="floor/floor/spike12" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike13" to="floor/floor/spike13" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike14" to="floor/floor/spike14" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike15" to="floor/floor/spike15" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike16" to="floor/floor/spike16" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike17" to="floor/floor/spike17" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike18" to="floor/floor/spike18" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike19" to="floor/floor/spike19" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike20" to="floor/floor/spike20" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike21" to="floor/floor/spike21" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike22" to="floor/floor/spike22" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike27" to="floor/floor/spike27" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike28" to="floor/floor/spike28" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike29" to="floor/floor/spike29" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike30" to="floor/floor/spike30" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike31" to="floor/floor/spike31" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike32" to="floor/floor/spike32" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike33" to="floor/floor/spike33" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike34" to="floor/floor/spike34" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike35" to="floor/floor/spike35" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike36" to="floor/floor/spike36" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike37" to="floor/floor/spike37" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike38" to="floor/floor/spike38" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike39" to="floor/floor/spike39" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike40" to="floor/floor/spike40" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike41" to="floor/floor/spike41" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike42" to="floor/floor/spike42" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike43" to="floor/floor/spike43" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike44" to="floor/floor/spike44" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike45" to="floor/floor/spike45" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike46" to="floor/floor/spike46" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor/spike47" to="floor/floor/spike47" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike87" to="floor/floor3/spike87" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike88" to="floor/floor3/spike88" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike89" to="floor/floor3/spike89" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike90" to="floor/floor3/spike90" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike91" to="floor/floor3/spike91" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike92" to="floor/floor3/spike92" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike93" to="floor/floor3/spike93" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike94" to="floor/floor3/spike94" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike95" to="floor/floor3/spike95" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike96" to="floor/floor3/spike96" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike97" to="floor/floor3/spike97" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike98" to="floor/floor3/spike98" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike99" to="floor/floor3/spike99" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike100" to="floor/floor3/spike100" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike101" to="floor/floor3/spike101" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike102" to="floor/floor3/spike102" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike103" to="floor/floor3/spike103" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike104" to="floor/floor3/spike104" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike105" to="floor/floor3/spike105" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike106" to="floor/floor3/spike106" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike107" to="floor/floor3/spike107" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike108" to="floor/floor3/spike108" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike109" to="floor/floor3/spike109" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike110" to="floor/floor3/spike110" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike111" to="floor/floor3/spike111" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike112" to="floor/floor3/spike112" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike113" to="floor/floor3/spike113" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike114" to="floor/floor3/spike114" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike115" to="floor/floor3/spike115" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike116" to="floor/floor3/spike116" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike117" to="floor/floor3/spike117" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike118" to="floor/floor3/spike118" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike119" to="floor/floor3/spike119" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike120" to="floor/floor3/spike120" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike121" to="floor/floor3/spike121" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike122" to="floor/floor3/spike122" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike123" to="floor/floor3/spike123" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike124" to="floor/floor3/spike124" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike125" to="floor/floor3/spike125" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike126" to="floor/floor3/spike126" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike127" to="floor/floor3/spike127" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike128" to="floor/floor3/spike128" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike129" to="floor/floor3/spike129" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike130" to="floor/floor3/spike130" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="floor/floor3/spike131" to="floor/floor3/spike131" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="check/checkpoint" to="check/checkpoint" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="check/checkpoint2" to="check/checkpoint2" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="cutsceen/final/Area2D" to="cutsceen/final" method="_on_Area2D_body_entered"]

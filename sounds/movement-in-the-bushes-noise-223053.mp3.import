@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/movement-in-the-bushes-noise-223053.mp3-414641ebe9180a0e9d7c266403347e68.mp3str"
+
+[deps]
+
+source_file="res://sounds/movement-in-the-bushes-noise-223053.mp3"
+dest_files=[ "res://.import/movement-in-the-bushes-noise-223053.mp3-414641ebe9180a0e9d7c266403347e68.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
